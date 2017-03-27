@@ -1,0 +1,8 @@
+1.docker maven 仓库设置
+SOLUTION:maven3.3.3镜像的maven地址为/usr/share/maven/conf/,将写好的setting.xml添加入conf目录下。
+2.docker build problem:
+ keyserver timed out  keyserver receive failed:keyserver error;
+SOLUTION:try several times
+3.docker login time out
+SOLUTION:
+

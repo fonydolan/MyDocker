@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <localRepository>/usr/.m2/repository/</localRepository>
+  <pluginGroups>
+  </pluginGroups>
+  <mirrors>
+    <mirror>
+      <id>alimaven</id>
+      <name>aliyun maven</name>
+      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+      <mirrorOf>central</mirrorOf>        
+    </mirror>
+  </mirrors>
+  <profiles>
+    <profile>
+	  <id>alimaven nexus</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+		<jdk>1.8</jdk>
+      </activation>
+	  <properties>
+		  <maven.compiler.source>1.8</maven.compiler.source>
+		  <maven.compiler.target>1.8</maven.compiler.target>
+		  <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+	  </properties>
+      <repositories>
+        <repository>
+          <id>localpublic</id>
+          <name>local public</name>
+          <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>alimaven nexus</activeProfile>
+  </activeProfiles>
+</settings>
